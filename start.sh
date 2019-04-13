@@ -40,5 +40,5 @@ fi
 if [ "$RM" == "N" ]; then
     docker run -it -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT}	--cap-add=SYS_PTRACE howpwn/pwn-box
 else
-    docker run -it --rm -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT}	--cap-add=SYS_PTRACE howpwn/pwn-box
+    docker run -it --rm -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT} --cap-add=SYS_PTRACE howpwn/pwn-box
 fi

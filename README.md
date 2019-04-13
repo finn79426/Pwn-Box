@@ -1,12 +1,14 @@
 # Pwn-Box
 
-A docker environment for Pwning in CTF based on **phusion/baseimage**
+A docker environment for Pwning in CTF.
+Based on **phusion/baseimage**.
 
 ## Usage
 
-Use interactive script:
+Run interactive script:
 
 ```
+wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/start.sh    # Download script
 bash ./start.sh
 ```
 
