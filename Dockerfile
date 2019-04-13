@@ -26,7 +26,7 @@ RUN dpkg --add-architecture i386 && \
     gdb-multiarch \
     netcat \
     git \
-    ruby2.3 \
+    ruby2.3 && \
     rm -rf /var/lib/apt/list/*
 
 # pip
@@ -38,7 +38,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 # capstone: ropgadget dependency
 RUN python3 -m pip install -U pip && \
     python3 -m pip install --no-cache-dir \
-    capstone \
+    capstone
 
 # ropgadget, pwntools
 RUN pip install --upgrade setuptools && \
