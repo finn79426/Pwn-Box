@@ -11,7 +11,7 @@ RUN dpkg --add-architecture i386 && \
     g++-multilib \
     cmake \
     ipython \
-    neovim \
+    vim \
     net-tools \
     libffi-dev \
     libssl-dev \
