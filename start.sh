@@ -37,6 +37,8 @@ if [ ! -z "$INPUT" ]; then
     fi
 fi
 
+printf "\n"
+
 if [ "$RM" == "N" ]; then
     docker run -it -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT}	--cap-add=SYS_PTRACE finn79426/pwn-box
 else

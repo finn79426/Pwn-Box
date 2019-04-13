@@ -12,7 +12,9 @@ wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/start.sh    # Do
 bash ./start.sh
 ```
 
-## Include tools
+Suggest: Put the script in "CTFs" folder, One container for one CTF ;)
+
+## Include tools & software
 
 - Capstone
 - CMake
