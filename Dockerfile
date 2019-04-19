@@ -59,6 +59,9 @@ RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \
     cd /root/Pwngdb && cat /root/Pwngdb/.gdbinit  >> /root/.gdbinit && \
     sed -i "s?source ~/peda/peda.py?# source ~/peda/peda.py?g" /root/.gdbinit
 
+# rcFile
+RUN wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/.bashrc -O ~/.bashrc
+
 WORKDIR /ctf/
 
 ENTRYPOINT ["/bin/bash"]
