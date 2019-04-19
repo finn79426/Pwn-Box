@@ -50,14 +50,13 @@ RUN pip install --upgrade setuptools && \
 # one_gadget
 RUN gem install one_gadget && rm -rf /var/lib/gems/2.3.*/cache/*
 
-# pwndbg
-RUN git clone https://github.com/pwndbg/pwndbg && \
-    cd pwndbg && chmod +x setup.sh && ./setup.sh
+# PEDA
+RUN git clone https://github.com/scwuaptx/peda.git /root/peda && \
+    cp /root/peda/.inpurc /root/
 
 # Pwngdb
 RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \
-    cd /root/Pwngdb && cat /root/Pwngdb/.gdbinit  >> /root/.gdbinit && \
-    sed -i "s?source ~/peda/peda.py?# source ~/peda/peda.py?g" /root/.gdbinit
+    cp root/Pwngdb/.gdbinit /root/
 
 # rcFile
 RUN wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/.bashrc -O ~/.bashrc
