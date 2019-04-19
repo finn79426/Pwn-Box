@@ -52,7 +52,8 @@ RUN gem install one_gadget && rm -rf /var/lib/gems/2.3.*/cache/*
 
 # PEDA
 RUN git clone https://github.com/scwuaptx/peda.git /root/peda && \
-    cp /root/peda/.inputrc /root/
+    cp /root/peda/.inputrc /root/ && \
+    sed -i 's/"autosave"  : ("on", "auto saving peda session, e.g: on|off"),/"autosave"  : ("off", "auto saving peda session, e.g: on|off"),/g' /root/peda/lib/config.py
 
 # Pwngdb
 RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \

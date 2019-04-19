@@ -25,7 +25,7 @@ Suggest: Put the script in "CTFs" folder, One container for one CTF ;)
 - NetCat
 - net-tools
 - OneGadget
-- pwndbg
+- [PEDA (scwuaptx)](https://github.com/scwuaptx/peda)
 - pwngdb
 - pwntools
 - Python2 & 3
