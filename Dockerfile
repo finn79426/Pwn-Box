@@ -52,7 +52,7 @@ RUN gem install one_gadget && rm -rf /var/lib/gems/2.3.*/cache/*
 
 # PEDA
 RUN git clone https://github.com/scwuaptx/peda.git /root/peda && \
-    cp /root/peda/.inpurc /root/
+    cp /root/peda/.inputrc /root/
 
 # Pwngdb
 RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \
