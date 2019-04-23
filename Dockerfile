@@ -24,7 +24,7 @@ RUN dpkg --add-architecture i386 && \
     wget \
     gdb \
     gdb-multiarch \
-    netcat \
+    nmap \
     git \
     ruby2.3 && \
     rm -rf /var/lib/apt/list/*

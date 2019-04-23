@@ -22,8 +22,9 @@ Suggest: Put the script in "CTFs" folder, One container for one CTF ;)
 - IPython
 - ltrace & strace
 - NASM
-- NetCat
 - net-tools
+- Nmap
+
 - OneGadget
 - [PEDA (scwuaptx)](https://github.com/scwuaptx/peda)
 - pwngdb
