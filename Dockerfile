@@ -62,6 +62,6 @@ RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \
 # rcFile
 RUN wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/.bashrc -O ~/.bashrc
 
-WORKDIR /pwn-box/
+WORKDIR /box/
 
 ENTRYPOINT ["/bin/bash"]

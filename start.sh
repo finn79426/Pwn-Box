@@ -33,7 +33,7 @@ fi
 printf "\n"
 
 if [ "$RM" == "N" ]; then
-    docker run -it -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/pwn-box --network host	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/box --network host	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 else
-    docker run -it --rm -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/pwn-box --network host --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it --rm -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/box --network host --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 fi
