@@ -9,7 +9,7 @@ Run interactive script:
 
 ```
 wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/start.sh    # Download script
-bash ./start.sh
+./start.sh
 ```
 
 Suggest: Put the script in "CTFs" folder, One container for one CTF ;)
