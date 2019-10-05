@@ -2,7 +2,6 @@
 
 # Default
 CTF="temp"
-PORT=55555
 RM="Y"
 
 echo "
@@ -23,12 +22,6 @@ if [ ! -z "$INPUT" ]; then
     unset INPUT
 fi
 
-read -p "Enter expose port (default 55555): " INPUT
-if [ ! -z "$INPUT" ]; then
-    PORT=$INPUT
-    unset INPUT
-fi
-
 read -r -p "Remove container when used ? [Y/n] " INPUT
 if [ ! -z "$INPUT" ]; then
     if [[ "$INPUT" =~ ^([nN][oO]|[nN])+$ ]]; then
@@ -40,7 +33,7 @@ fi
 printf "\n"
 
 if [ "$RM" == "N" ]; then
-    docker run -it -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT}	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf --network host	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 else
-    docker run -it --rm -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf -p ${PORT}:${PORT} --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it --rm -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf --network host --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 fi
