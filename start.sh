@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default
-CTF="temp"
+PROJECT="temp"
 RM="Y"
 
 echo "
@@ -16,9 +16,9 @@ echo "
 "
 
 
-read -p "Enter CTF name (default \"temp\"): " INPUT
+read -p "Enter project name (default \"temp\"): " INPUT
 if [ ! -z "$INPUT" ]; then
-    CTF=$INPUT
+    PROJECT=$INPUT
     unset INPUT
 fi
 
@@ -33,7 +33,7 @@ fi
 printf "\n"
 
 if [ "$RM" == "N" ]; then
-    docker run -it -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf --network host	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/pwn-box --network host	--cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 else
-    docker run -it --rm -h ${CTF} --name ${CTF} -v $(pwd)/${CTF}:/ctf --network host --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
+    docker run -it --rm -h ${PROJECT} --name ${PROJECT} -v $(pwd)/${PROJECT}:/pwn-box --network host --cap-add=SYS_PTRACE --privileged finn79426/pwn-box
 fi
