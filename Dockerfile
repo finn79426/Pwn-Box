@@ -57,7 +57,7 @@ RUN git clone https://github.com/scwuaptx/peda.git /root/peda && \
 
 # Pwngdb
 RUN git clone https://github.com/scwuaptx/Pwngdb.git /root/Pwngdb && \
-    cp root/Pwngdb/.gdbinit /root/
+    cp /root/Pwngdb/.gdbinit /root/
 
 # rcFile
 RUN wget https://raw.githubusercontent.com/finn79426/Pwn-Box/master/.bashrc -O ~/.bashrc
